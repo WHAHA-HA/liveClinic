@@ -1,0 +1,40 @@
+<div class="col-md-9 col-sm-7 mess_info_content content_wrapper pull-right">
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="inbox_fax">
+			<div class="welcome-user">
+				<div class="col-sm-8">
+					<h4>Fax</h4>
+					<p>Short Description goes here ...</p>
+				</div>
+				<div class="col-sm-4">
+					
+				</div>
+			</div>
+
+			<div class="messages_wrapper">
+				<div class="messagees_title">
+					<div class="col-sm-3">To</div>
+					<div class="col-sm-3">Notes</div>
+					<div class="col-sm-2">File</div>
+					<div class="col-sm-3 text-right">Date</div>
+					<div class="col-sm-1 text-right"></div>
+				</div>
+			</div>
+
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div ng-repeat="fax in data">
+					<div class="single_message_head status-{{fax.status}}">
+						<div class="col-sm-3">{{fax.to}}</div>
+						<div class="col-sm-3">{{fax.notes}}</div>
+						<div class="col-sm-2"><a href="/download/fax/sent/{{fax.id}}"><i class="fa fa-download"></i></a></div>
+						<div class="col-sm-3 text-right">{{ fax.created_at | date: 'yyyy-MM-dd h:mma' }}</div>
+						<div class="col-md-1 text-right">
+							<a href="javascript:;" ng-click="resendFax(fax.id)" ng-show="fax.status!=0"><i class='fa fa-refresh' title="Try sending again"></i></a>
+							<a href="javascript:;" ng-click="deleteFaxSent(fax.id)"><i class='fa fa-trash'></i></a></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,204 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+    <div class="welcome-user">
+        <div class="col-sm-8">
+            <h4>My Facility</h4>
+            <p>Short Description</p>
+        </div>
+        <div class="col-sm-4">
+            <button class="button-primary pull-right" data-toggle="modal" data-target="#add_facility">Add Facility</button>
+
+        </div>
+    </div>
+
+    <div class="alert alert-{{updateState.status}}" role="alert" ng-show="updateState">
+        {{updateState.message}}
+    </div>
+    <!-- Add New Facility Modal -->
+    <div class="modal custom_modal fade" id="add_facility" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelAddFacility()"><span aria-hidden="true">&times;</span></button>
+                    <h4>Add New Facility</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="f_neame">Facility Name</label>
+                        <input id="f_neame" type="text" placeholder="Enter facility name" ng-model="newFacility.name" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Phone">Phone</label>
+                        <input id="Phone" type="phone" placeholder="Enter phone number" ng-model="newFacility.phone" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Fax">Fax</label>
+                        <input id="Fax" type="phone" placeholder="Exnter fax number" ng-model="newFacility.fax" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Address">Address</label>
+                        <input id="Address" type="text" placeholder="Enter address" ng-model="newFacility.address" />
+
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="City">City</label>
+                        <input id="City" type="text" placeholder="Enter city name" ng-model="newFacility.city" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="ZIP">ZIP</label>
+                        <input id="ZIP" type="text" placeholder="Select access level" ng-model="newFacility.zip" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="State">State</label>
+                        <input id="State" type="text" placeholder="Enter State" ng-model="newFacility.state" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Country">Country</label>
+                        <select id="Country" ng-model="newFacility.country" ng-options="country.code as country.name for country in countryList" >
+                            <option value="">Choose Country</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="button-primary" data-toggle="modal" data-target="#add_facility" ng-click="addFacility()" >Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Facility Modal -->
+    <div class="modal custom_modal fade" id="edit_facility" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelSelectFacility()"><span aria-hidden="true">&times;</span></button>
+                    <h4>Edit Facility</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="f_neame">Facility Name</label>
+                        <input id="f_neame" type="text" placeholder="Enter facility name" ng-model="selectedFacility.name" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Phone">Phone</label>
+                        <input id="Phone" type="phone" placeholder="Enter phone number" ng-model="selectedFacility.phone" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Fax">Fax</label>
+                        <input id="Fax" type="phone" placeholder="Exnter fax number" ng-model="selectedFacility.fax" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Address">Address</label>
+                        <input id="Address" type="text" placeholder="Enter address" ng-model="selectedFacility.address" />
+
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="City">City</label>
+                        <input id="City" type="text" placeholder="Enter city name" ng-model="selectedFacility.city" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="ZIP">ZIP</label>
+                        <input id="ZIP" type="text" placeholder="Select access level" ng-model="selectedFacility.zip" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="State">State</label>
+                        <input id="State" type="text" placeholder="Enter State" ng-model="selectedFacility.state" />
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Country">Country</label>
+                        <select id="Country" ng-model="selectedFacility.country" ng-options="country.code as country.name for country in countryList" ></select>
+                    </div>
+
+                    <button type="button" class="button-primary" data-toggle="modal" data-target="#edit_facility" ng-click="saveFacility()" >Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Facility Modal -->
+    <div class="modal custom_modal fade" id="delete_facility" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelSelectFacility()"><span aria-hidden="true">&times;</span></button>
+                    <h4>Delete Facility</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="f_neame">Are you sure to delete this facility?</label>
+                    </div>
+
+
+                    <button type="button" class="button-primary" data-toggle="modal" data-target="#delete_facility" ng-click="removeFacility()" >Delete</button>
+                    <button type="button" class="button-secondary" data-toggle="modal" data-target="#delete_facility" ng-click="cancelSelectFacility()" >Cancel</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ehr_urers_wrapper">
+
+        <div class="single_ehr_urers single_ehr_urers_head">
+            <div class="col-sm-3">
+                <p>Name</p>
+            </div>
+            <div class="col-sm-3">
+                <p>Address</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p>Phone Number</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p>Fax</p>
+            </div>
+        </div>
+
+        <div class="single_ehr_urers" ng-repeat="facility in facilities">
+            <div class="col-sm-3">
+                <p>{{facility.name}}</p>
+            </div>
+            <div class="col-sm-3">
+                <p>{{facility.address}}</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p>{{facility.phone}}</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p class="pull-left">{{facility.fax}}</p>
+                <button type="button" class="pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#edit_facility" ng-click="selectFacility(facility)">Edit Facility</a></li>
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#delete_facility" ng-click="selectFacility(facility)">Remove Facility</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

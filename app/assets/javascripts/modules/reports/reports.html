@@ -1,0 +1,464 @@
+<div class="col-md-2 col-sm-3 message_informations">
+    <div class="message_info_title">
+        <h4>Reports</h4>
+        <p>Short Description</p>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="message_content report_content tab-pane active" id="message_inbox">
+            <ul class="nav" role="tablist">
+                <li role="presentation" class="active"><a href="#inbox_fax" aria-controls="inbox_fax" role="tab" data-toggle="tab">Audit Report</a></li>
+                <li><a href="#inbox_lab_results" aria-controls="inbox_lab_results" role="tab" data-toggle="tab">Patient Details Report</a></li>
+                <li><a href="#inbox_referrals" aria-controls="inbox_referrals" role="tab" data-toggle="tab">Drug Interation Report</a></li>
+                <li><a href="#inbox_patient_message" aria-controls="inbox_patient_message" role="tab" data-toggle="tab">User Account Report</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane message_content" id="message_sent_items">
+            <ul class="nav">
+                <li role="presentation" class=""><a href="#sent_fax_m" aria-controls="sent_fax_m" role="tab" data-toggle="tab">Fax <span>4</span></a></li>
+                <li><a href="#sent_lab_results" aria-controls="sent_lab_results" role="tab" data-toggle="tab">Lab Results<span>2</span></a></li>
+                <li><a href="#sent_patient_message" aria-controls="sent_patient_message" role="tab" data-toggle="tab">Patient Message<span>8</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-9 col-sm-7 mess_info_content report_info_content content_wrapper pull-right">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="inbox_fax">
+            <div class="welcome-user">
+                <div class="col-sm-8">
+                    <h4>Audit Report</h4>
+                    <p>Short Description goes here ...</p>
+                </div>
+                <div class="col-sm-4">
+                    <button class="button-primary pull-right show_filters audit_one"></button>
+                </div>
+            </div>
+            <div id="report_filter" class="report_one">
+                <div class="col-sm-2">
+                    <input type="date" placeholder="Start Date" />
+                </div>
+                <div class="col-sm-2">
+                    <input type="date" placeholder="Start Date" />
+                </div>
+                <button class="button-primary pull-right search_btn">SEARCH</button>
+            </div>
+            <div class="clearfix"></div>
+            <div class="messages_wrapper">
+                <div class="messagees_title">
+                    <div class="col-sm-3">Provider</div>
+                    <div class="col-sm-3">User Email</div>
+                    <div class="col-sm-2">Action</div>
+                    <div class="col-sm-2">Access Details</div>
+                    <div class="col-sm-2">Date</div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div role="tab" id="headingOne">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="col-sm-3">Charlie Estrada</div>
+                        <div class="col-sm-3">perry.hartmann@wyman.info</div>
+                        <div class="col-sm-2">Login/Logout</div>
+                        <div class="col-sm-2">Daniel logged in</div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body chat_panel">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div role="tab" id="headingTwo">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <div class="col-sm-3">Mollie Watkins</div>
+                        <div class="col-sm-3">kulas_reese@bella.net</div>
+                        <div class="col-sm-2">Login/Logout</div>
+                        <div class="col-sm-2">Mollie logged in</div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-3">
+                            <img src="img/message-fax.png" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tab" id="headingThree">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <div class="col-sm-3">Victoria Williamson</div>
+                        <div class="col-sm-3">kristopher.wolf@gmail.com</div>
+                        <div class="col-sm-2">Login/Logout</div>
+                        <div class="col-sm-2"><span class="color-opacity">Victoria logged in</span></div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-3">
+                            <img src="img/message-fax.png" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="inbox_lab_results">
+            <div class="welcome-user">
+                <div class="col-sm-8">
+                    <h4>Patient Details Report</h4>
+                    <p>Short Description goes here ...</p>
+                </div>
+                <div class="col-sm-4">
+                    <button class="button-primary pull-right show_filters audit_two"></button>
+                </div>
+            </div>
+            <div id="report_filter" class="report_two report_pdr">
+                <div class="col-sm-3 fix_width_3">
+                    <select name="" id="">
+                        <option value="age">Age</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="problem">Problem</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="allergies">Allergies</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="medication">Medication</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="gender">Gender</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="medications">Medications</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="lab_tests">Lab Tests</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button class="button-primary pull-right search_btn">SEARCH</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="messages_wrapper">
+                <div class="messagees_title">
+                    <div class="col-sm-2">First Name</div>
+                    <div class="col-sm-2">Last Name</div>
+                    <div class="col-sm-2">Patient ID</div>
+                    <div class="col-sm-1">Age</div>
+                    <div class="col-sm-3">Email</div>
+                    <div class="col-sm-2">Phone</div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div role="tab" id="headingOne">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#LabcollapseOne" aria-expanded="true" aria-controls="LabcollapseOne">
+                        <div class="col-sm-2">Charlie</div>
+                        <div class="col-sm-2">Hartmann</div>
+                        <div class="col-sm-2">23551201</div>
+                        <div class="col-sm-1">42</div>
+                        <div class="col-sm-3">annabelle.blanda@murray.ca</div>
+                        <div class="col-sm-2">204-613-5448</div>
+                    </div>
+                </div>
+                <div id="LabcollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body chat_panel">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div role="tab" id="headingTwo">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#labcollapseTwo" aria-expanded="true" aria-controls="labcollapseTwo">
+                        <div class="col-sm-2">Mollie</div>
+                        <div class="col-sm-2">Rreese</div>
+                        <div class="col-sm-2">23551201</div>
+                        <div class="col-sm-1">45</div>
+                        <div class="col-sm-3">lizzie.shanahan@yahoo.com</div>
+                        <div class="col-sm-2">784-741-3718</div>
+                    </div>
+                </div>
+                <div id="labcollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-12">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                        <div class="col-sm-2 attachment_fax">
+                            <img src="img/attachment-result.png" alt="" />
+                            <p>JD03343.pdf</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tab" id="headingThree">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#labcollapseThree" aria-expanded="true" aria-controls="labcollapseThree">
+                        <div class="col-sm-2">Victoria</div>
+                        <div class="col-sm-2">Williamson</div>
+                        <div class="col-sm-2">23551201</div>
+                        <div class="col-sm-1">34</div>
+                        <div class="col-sm-3">theron_breitenberg@yahoo.com</div>
+                        <div class="col-sm-2">813-372-0549</div>
+                    </div>
+                </div>
+                <div id="labcollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-3">
+                            <img src="img/message-fax.png" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="inbox_referrals">
+            <div class="welcome-user">
+                <div class="col-sm-8">
+                    <h4>Drug Interation Report</h4>
+                    <p>Short Description goes here ...</p>
+                </div>
+                <div class="col-sm-4">
+                    <button class="button-primary pull-right show_filters audit_three"></button>
+                </div>
+            </div>
+            <div id="report_filter" class="report_three report_pdr">
+                <div class="col-sm-2">
+                    <input type="date" placeholder="Start Date" />
+                </div>
+                <div class="col-sm-2">
+                    <input type="date" placeholder="End Date" />
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="allergies">Allergies</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="provider_name">Provider Name</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <button class="button-primary pull-right search_btn">SEARCH</button>
+                </div>
+            </div>
+            <div class="messages_wrapper">
+                <div class="messagees_title">
+                    <div class="col-sm-2">Provider</div>
+                    <div class="col-sm-2">Patient</div>
+                    <div class="col-sm-2">Severity</div>
+                    <div class="col-sm-2">Interaction</div>
+                    <div class="col-sm-1">Severity</div>
+                    <div class="col-sm-1">Alert</div>
+                    <div class="col-sm-2">Date</div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div role="tab" id="headingOne">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#ReferralscollapseOne" aria-expanded="true" aria-controls="ReferralscollapseOne">
+                        <div class="col-sm-2">Tyler Cannon</div>
+                        <div class="col-sm-2">Olivia Brewer</div>
+                        <div class="col-sm-2">High</div>
+                        <div class="col-sm-2">TBD</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="ReferralscollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body chat_panel">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div role="tab" id="headingTwo">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#ReferralscollapseTwo" aria-expanded="true" aria-controls="ReferralscollapseTwo">
+                        <div class="col-sm-2">Christopher Oliver</div>
+                        <div class="col-sm-2">Leila Brady</div>
+                        <div class="col-sm-2">Medium</div>
+                        <div class="col-sm-2">-</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="ReferralscollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-12">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                        <div class="col-sm-2 attachment_fax">
+                            <img src="img/attachment-result.png" alt="" />
+                            <p>JD03343.pdf</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tab" id="headingThree">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#ReferralscollapseThree" aria-expanded="true" aria-controls="ReferralscollapseThree">
+                        <div class="col-sm-2">Emma Sandoval</div>
+                        <div class="col-sm-2">Ronnie Hill</div>
+                        <div class="col-sm-2">Medium</div>
+                        <div class="col-sm-2">Low</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-1">-</div>
+                        <div class="col-sm-2">08/14/2016</div>
+                    </div>
+                </div>
+                <div id="ReferralscollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-3">
+                            <img src="img/message-fax.png" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="inbox_patient_message">
+            <div class="welcome-user">
+                <div class="col-sm-8">
+                    <h4>User Account Report</h4>
+                    <p>Short Description goes here ...</p>
+                </div>
+                <div class="col-sm-4">
+                    <button class="button-primary pull-right show_filters audit_four"></button>
+                </div>
+            </div>
+            <div id="report_filter" class="report_four report_pdr">
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="age">Age</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="problem">Problem</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="medication">Medication</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="allergies">Allergies</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="gender">Gender</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="medications">Medications</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <select name="" id="">
+                        <option value="lab_tests">Lab Tests</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button class="button-primary pull-right search_btn">SEARCH</button>
+                </div>
+            </div>
+            <div class="messages_wrapper">
+                <div class="messagees_title">
+                    <div class="col-sm-3">Name</div>
+                    <div class="col-sm-4">Profile</div>
+                    <div class="col-sm-3">Email</div>
+                    <div class="col-sm-2">Phone</div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div role="tab" id="headingOne">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#patientcollapseOne" aria-expanded="true" aria-controls="patientcollapseOne">
+                        <div class="col-sm-3">Tyler Cannon</div>
+                        <div class="col-sm-4">Olivia Brewer</div>
+                        <div class="col-sm-3">gennaro_hagenes@tromp.com</div>
+                        <div class="col-sm-2">168-535-0545</div>
+                    </div>
+                </div>
+                <div id="patientcollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body chat_panel">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div role="tab" id="headingTwo">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#patientscollapseTwo" aria-expanded="true" aria-controls="patientscollapseTwo">
+                        <div class="col-sm-3">Christopher Oliver</div>
+                        <div class="col-sm-4">Leila Brady</div>
+                        <div class="col-sm-3">schiller.waylon@kaleb.biz</div>
+                        <div class="col-sm-2">135-323-2986</div>
+                    </div>
+                </div>
+                <div id="patientscollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-12">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                        <div class="col-sm-2 attachment_fax">
+                            <img src="img/attachment-result.png" alt="" />
+                            <p>JD03343.pdf</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tab" id="headingThree">
+                    <div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#patientscollapseThree" aria-expanded="true" aria-controls="patientscollapseThree">
+                        <div class="col-sm-3">Emma Sandoval</div>
+                        <div class="col-sm-4">Ronnie Hill</div>
+                        <div class="col-sm-3">jordane.moore@rodriguez.info</div>
+                        <div class="col-sm-2">419-512-6832</div>
+                    </div>
+                </div>
+                <div id="patientscollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body chat_panel">
+                        <div class="col-sm-3">
+                            <img src="img/message-fax.png" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <h5>Fax John Doe</h5>
+                            <p>pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sent_fax_m">
+            <h2>SENT fax</h2>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sent_lab_results">
+            <h2>SENT lab results</h2>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sent_patient_message">
+            <h2>SENT Patient message</h2>
+        </div>
+    </div>
+</div>

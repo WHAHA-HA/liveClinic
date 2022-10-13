@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  state_id: 1
+  title: MyString
+  degree: MyString
+  sex: MyString
+  p_speciality: MyString
+  access_level: MyString
+  s_speciality: MyString
+  p_faculty: MyString
+  web_add: MyString
+  biography: MyString
+  medical_license: MyString
+  medical_license: MyString
+  expiration: 2016-04-19 21:10:34
+  state_practice_medicine: MyString
+  degree_listed: MyString
+  npi_number: MyString
+  dea_number: MyString
+  upin: MyString
+  ein_tin: MyString
+  nadean_number: MyString
+  personal_email: MyString
+  ver_phone: MyString
+  office_phone: MyString
+  extension: MyString
+
+two:
+  price: 1.5
+  state_id: 1
+  title: MyString
+  degree: MyString
+  sex: MyString
+  p_speciality: MyString
+  access_level: MyString
+  s_speciality: MyString
+  p_faculty: MyString
+  web_add: MyString
+  biography: MyString
+  medical_license: MyString
+  medical_license: MyString
+  expiration: 2016-04-19 21:10:34
+  state_practice_medicine: MyString
+  degree_listed: MyString
+  npi_number: MyString
+  dea_number: MyString
+  upin: MyString
+  ein_tin: MyString
+  nadean_number: MyString
+  personal_email: MyString
+  ver_phone: MyString
+  office_phone: MyString
+  extension: MyString

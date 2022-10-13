@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  height: 1.5
+  weight: 1.5
+  bmi: 1.5
+  bp: 1.5
+  temp: 1.5
+  route: MyString
+  pulse: 1.5
+  rr: 1.5
+  sat: 1
+  ra: MyString
+  pain: MyString
+  date: 2016-04-21 15:57:19
+  encounter_id: 
+
+two:
+  doctor_id: 
+  patient_id: 
+  height: 1.5
+  weight: 1.5
+  bmi: 1.5
+  bp: 1.5
+  temp: 1.5
+  route: MyString
+  pulse: 1.5
+  rr: 1.5
+  sat: 1
+  ra: MyString
+  pain: MyString
+  date: 2016-04-21 15:57:19
+  encounter_id: 

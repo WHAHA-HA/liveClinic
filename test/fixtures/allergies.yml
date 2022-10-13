@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  allergy: MyString
+  search: MyString
+  severity: MyString
+  reaction: MyString
+  onset: MyString
+  date: 2016-04-21 11:36:58
+  comment: MyString
+  status: 1
+
+two:
+  doctor_id: 
+  patient_id: 
+  allergy: MyString
+  search: MyString
+  severity: MyString
+  reaction: MyString
+  onset: MyString
+  date: 2016-04-21 11:36:58
+  comment: MyString
+  status: 1

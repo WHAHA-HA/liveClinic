@@ -1,0 +1,97 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+    <div class="welcome-user">
+        <div class="col-sm-8">
+            <h4>Add Practice Info</h4>
+            <p>Enter your practice address and contact information to customize your EHR</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="" class="button-primary button-secondary pull-right" ng-click="cancel()">Cancel</a>
+            <a href="" class="button-primary pull-right" ng-click="savePractice()">Save</a>
+
+        </div>
+    </div>
+    <div class="alert alert-{{updateState.status}}" role="alert" ng-show="updateState">
+        {{updateState.message}}
+    </div>
+
+    <div class="add_patent_wrapper">
+
+        <form action="#" onsubmit="return false;">
+            <div class="sinlgle_form_row">
+                <div class="col-sm-6 padding-left-none">
+                    <label for="p_name">Practice Name</label>
+                    <input type="text" id="p_name" placeholder="Practice Name" ng-model="editPractice.name"/>
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="p_phone">Practice Phone</label>
+                    <input type="text" id="p_phone" placeholder="415-235-9002" ng-model="editPractice.phone"/>
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="fax">Fax</label>
+                    <input type="text" id="fax" placeholder="415-235-9002" ng-model="editPractice.fax"/>
+                </div>
+
+            </div>
+
+            <div class="sinlgle_form_row">
+                <div class="col-sm-6 padding-left-none">
+                    <label for="facility_n">Facility Name</label>
+                    <input type="text" id="facility_n" placeholder="Facility name 1" ng-model="editPractice.facility_name"/>
+                </div>
+
+                <div class="col-sm-6 padding-left-none">
+                    <span class="color-gray"><br>Your facility name can be same as your practice name,<br>but cannot contain more than 35 characters</span>
+                </div>
+            </div>
+
+            <div class="sinlgle_form_row">
+                <div class="col-sm-6 padding-left-none">
+                    <label for="p_address">Practice Address</label>
+                    <input type="text" id="p_address" placeholder="ex. John" ng-model="editPractice.address"/>
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="siite">Suite</label>
+                    <input id="siite" type="text" placeholder="ex. text" ng-model="editPractice.suite"/>
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="zip">Zip</label>
+                    <input id="zip" type="text"  ng-model="editPractice.zip"/>
+                </div>
+            </div>
+
+            <div class="sinlgle_form_row">
+                <div class="col-sm-6 padding-left-none">
+                    <label for="city">City</label>
+                    <input id="city" type="text"  ng-model="editPractice.city"/>
+
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="state">State</label>
+                    <input id="state" type="text"  ng-model="editPractice.state"/>
+                </div>
+
+                <div class="col-sm-3 padding-left-none">
+                    <label for="country">Country</label>
+                    <select id="country" ng-model="editPractice.country" ng-options="country.code as country.name for country in countryList" >
+                        <option value="">Choose Country</option>
+                    </select>
+                    <!--<input id="country" type="text" placeholder="CountryName" ng-model="editPractice.country"/>-->
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <hr />
+
+            <button class="button-primary" type="button" ng-click="savePractice()">Save</button>
+        </form>
+
+
+    </div>
+
+
+</div>

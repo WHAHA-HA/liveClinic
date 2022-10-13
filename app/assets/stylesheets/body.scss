@@ -1,0 +1,119 @@
+[ui-view].fade {
+	&.ng-enter {
+		transition: 0.5s linear all;
+		opacity: 0;
+	}
+
+	&.ng-enter.ng-enter-active {
+		opacity:1;
+	}
+
+	opacity:1;
+
+	&.ng-leave.ng-leave-active {
+		display: none;
+	}
+}
+
+/* scheduler */
+#add_appoinment_modal.custom_modal .modal-content {
+	overflow: visible;
+}
+
+#add_appoinment_modal.custom_modal .modal-body.appoinment_modal_body {
+	overflow: visible;
+}
+
+/* charts */
+.add_patent_wrapper .row {
+	margin-bottom: 15px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+.mb-10 {
+	margin-bottom: 10px;
+}
+.mt-15 {
+	margin-top: 15px;
+}
+.mb-15 {
+	margin-bottom: 15px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+/* patients avatar */
+
+.change_avater_wrap {
+	overflow: visible !important;
+}
+
+.avatar-75 {
+	width: 75px;
+	height: 75px;
+
+	border-radius: 50%;
+	border: 1px solid #eee;
+
+	box-shadow: 1px 1px 3px 0px;
+}
+
+.avatar-42 {
+	width: 42px;
+	height: 42px;
+
+	border-radius: 50%;
+	border: 1px solid #eee;
+}
+
+.avatar-40 {
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+	border: 1px solid #eee;
+}
+
+/* tasks */
+.tasks_wrapper .command-buttons a.dropdown-toggle {
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+.single_task.row {
+	overflow: visible;
+}
+
+.custom_modal h4 {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+
+/* message - fax */
+.single_message_head.unread {
+	background-color: #f0f0f0;
+}
+
+.single_message_head.status-0 {
+	
+}
+
+.single_message_head.status-1 {
+	background-color: #fff0f0;
+}
+.single_message_head.status-2 {
+	background-color: #f0f0ff;
+}

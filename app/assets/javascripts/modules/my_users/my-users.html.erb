@@ -1,0 +1,162 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+    <div class="welcome-user">
+        <div class="col-sm-8">
+            <h4>Add EHR Users</h4>
+            <p>Enter your practice address and contact information to customize your EHR</p>
+        </div>
+        <div class="col-sm-4">
+            <button class="button-primary pull-right" data-toggle="modal" data-target="#add_doctor_staff">Add New User</button>
+        </div>
+    </div>
+
+    <div class="alert alert-{{updateState.status}}" role="alert" ng-show="updateState">
+        {{updateState.message}}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal custom_modal fade" id="add_doctor_staff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelAddDoctorStaff()"><span aria-hidden="true">&times;</span></button>
+                    <h4>Add New User</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="First_Name">First Name</label>
+                        <input id="First_Name" type="text" placeholder="Enter first name" ng-model="newDoctorStaff.user_attributes.first_name"/>
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Last_Name">Last Name</label>
+                        <input id="Last_Name" type="text" placeholder="Enter last name" ng-model="newDoctorStaff.user_attributes.last_name"/>
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Email">Email</label>
+                        <input id="Email" type="email" placeholder="Enter email address" ng-model="newDoctorStaff.user_attributes.email"/>
+                    </div>
+
+                    <div class="col-sm-6 padding-left-none">
+                        <label for="Access_Level">Access Level</label>
+
+                        <select name="" id="Access_Level" ng-model="newDoctorStaff.access_level_id" ng-options="access_level.id as access_level.name for access_level in accessLevels">
+                            <option value="">Select access level</option>
+                        </select>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <input type="checkbox" id="Admin" ng-model="newDoctorStaff.is_admin"/>
+                    <label for="Admin">Admin</label>
+                    <br><br>
+
+                    <button type="submit" class="button-primary" data-dismiss="modal" aria-label="Close"  ng-click="addDoctorStaff()">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Modal -->
+  <div class="modal custom_modal fade" id="edit_doctor_staff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelEditDoctorStaff()"><span aria-hidden="true">&times;</span></button>
+          <h4>Edit User</h4>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="col-sm-6 padding-left-none">
+            <label for="First_Name">First Name</label>
+            <input id="First_Name" type="text" placeholder="Enter first name" ng-model="selectedDoctorStaff.user_attributes.first_name"/>
+          </div>
+
+          <div class="col-sm-6 padding-left-none">
+            <label for="Last_Name">Last Name</label>
+            <input id="Last_Name" type="text" placeholder="Enter last name" ng-model="selectedDoctorStaff.user_attributes.last_name"/>
+          </div>
+
+          <div class="col-sm-6 padding-left-none">
+            <label for="Email">Email</label>
+            <input id="Email" type="email" placeholder="Enter email address" ng-model="selectedDoctorStaff.user_attributes.email"/>
+          </div>
+
+          <div class="col-sm-6 padding-left-none">
+            <label for="Access_Level">Access Level</label>
+
+            <select name="" id="Access_Level" ng-model="selectedDoctorStaff.access_level_id" ng-options="access_level.id as access_level.name for access_level in accessLevels">
+              <option value="">Select access level</option>
+            </select>
+
+          </div>
+          <div class="clearfix"></div>
+          <input type="checkbox" id="Admin" ng-model="selectedDoctorStaff.is_admin"/>
+          <label for="Admin">Admin</label>
+          <br><br>
+
+          <button type="submit" class="button-primary" data-dismiss="modal" aria-label="Close"  ng-click="saveDoctorStaff()">Submit</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Delete Facility Modal -->
+    <div class="modal custom_modal fade" id="delete_doctor_staff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelSelectDoctorStaff()"><span aria-hidden="true">&times;</span></button>
+              <h4>Delete User</h4>
+            </div>
+            <div class="modal-body">
+
+
+              <div class="col-sm-6 padding-left-none">
+                <label for="f_neame">Are you sure to delete this user?</label>
+              </div>
+
+
+              <button type="button" class="button-primary" data-toggle="modal" data-target="#delete_doctor_staff" ng-click="removeDoctorStaff()" >Delete</button>
+              <button type="button" class="button-secondary" data-toggle="modal" data-target="#delete_doctor_staff" ng-click="cancelSelectDoctorStaff()" >Cancel</button>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="ehr_urers_wrapper">
+
+        <div class="single_ehr_urers" ng-repeat="doctorStaff in doctorStaffs">
+            <div class="col-sm-3">
+                <img src="/assets/charlie.png" alt="" /><p>{{doctorStaff.user_attributes.first_name + " " + doctorStaff.user_attributes.last_name}}</p>
+            </div>
+            <div class="col-sm-3">
+                <p>{{doctorStaff.user_attributes.email}}</p>
+            </div>
+
+            <div class="col-sm-2">
+                <p>{{doctorStaff.access_level_id}}</p>
+            </div>
+
+            <div class="col-sm-2">
+                <p>{{doctorStaff.is_admin ? "Admin" : "User"}}</p>
+            </div>
+
+            <div class="col-sm-2">
+                <p class="pull-left">Active User </p>
+                <button type="button" class="pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#edit_doctor_staff" ng-click="selectDoctorStaff(doctorStaff)">Edit User</a></li>
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#delete_doctor_staff" ng-click="selectDoctorStaff(doctorStaff)">Remove User</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

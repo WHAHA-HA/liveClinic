@@ -1,0 +1,2 @@
+module HealthExamDatesHelper
+end

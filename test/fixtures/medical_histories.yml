@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  major_history: MyText
+  ongoing_history: MyText
+  allergy_history: MyText
+  family_history: MyText
+  preventive_history: MyText
+  social_history: MyText
+  nutrition_history: MyText
+  developmental_history: MyText
+  encounter_id: 
+
+two:
+  doctor_id: 
+  patient_id: 
+  major_history: MyText
+  ongoing_history: MyText
+  allergy_history: MyText
+  family_history: MyText
+  preventive_history: MyText
+  social_history: MyText
+  nutrition_history: MyText
+  developmental_history: MyText
+  encounter_id: 

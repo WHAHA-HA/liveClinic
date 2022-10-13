@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  patient_name: MyString
+  provider: MyString
+  facility: MyString
+  chief_complaint: MyText
+  appointment_type_id: 
+  duration: 1
+  duration_select: MyString
+  when_time: 2016-04-21 11:42:24
+  end_time: 2016-04-21 11:42:24
+  repeat_val: MyString
+  repeats: MyString
+  occurs_on: MyString
+  every_day: MyString
+  ends_on: MyString
+  string: MyString
+  after: 1
+  daily: MyString
+  every_week: MyString
+
+two:
+  doctor_id: 
+  patient_id: 
+  patient_name: MyString
+  provider: MyString
+  facility: MyString
+  chief_complaint: MyText
+  appointment_type_id: 
+  duration: 1
+  duration_select: MyString
+  when_time: 2016-04-21 11:42:24
+  end_time: 2016-04-21 11:42:24
+  repeat_val: MyString
+  repeats: MyString
+  occurs_on: MyString
+  every_day: MyString
+  ends_on: MyString
+  string: MyString
+  after: 1
+  daily: MyString
+  every_week: MyString

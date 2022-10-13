@@ -1,0 +1,274 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+<div class="welcome-user">
+	<div class="col-sm-8">
+		<h4>My Profile</h4>
+		<p>Short Description</p>
+	</div>
+	<div class="col-sm-4">
+		<a href="javascript:void(0)" class="button-primary pull-right" ng-click="saveProfile()">Update</a>
+	</div>
+</div>
+
+<div class="alert alert-{{updateState.status}}" role="alert" ng-show="updateState">
+	{{updateState.message}}
+</div>
+
+<ul class="nav profile_nav" role="tablist">
+	<li role="presentation" class="active"><a href="#/profile#login_settings" aria-controls="login_settings" role="tab" data-toggle="tab" ng-click="selectTab($event, 'login')">Login Settings</a></li>
+	<li role="presentation"><a href="#/profile#profile_settings" aria-controls="profile_settings" role="tab" data-toggle="tab" ng-click="selectTab($event, 'profile')">Profile Settings</a></li>
+	<li role="presentation"><a href="#/profile#medical_licences" aria-controls="medical_licences" role="tab" data-toggle="tab" ng-click="selectTab($event, 'profile')">Medical Licenses</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="login_settings">
+
+	<div class="add_patent_wrapper">
+		<form action="#">
+
+			<div class="change_avater_wrap clearfix">
+				<img class="align-left avatar-75" src="{{ currentUser.avatar ? currentUser.avatar : '/assets/avater-75x75.png' }}" alt="" />
+				<div class="upload_wrap pull-left">
+					<div class="mb-10">Profile Picture</div>
+					<button type="file" ngf-select="uploadFile($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="input-file-trigger">Choose File</button>
+
+					<p class="file-return"></p>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="sinlgle_form_row">
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="f_name">Title</label>
+					<input type="text" id="title" ng-model="currentUser.title" placeholder="title"/>
+				</div>
+			</div>
+
+			<div class="sinlgle_form_row">
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="f_name">First Name</label>
+					<input type="text" id="f_name" ng-model="currentUser.first_name" placeholder="first name"/>
+				</div>
+
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="m_name">Middle Name</label>
+					<input type="text" id="m_name" ng-model="currentUser.middle_name" placeholder="middle name"/>
+				</div>
+
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="l_name">Last Name</label>
+					<input type="text" id="l_name" ng-model="currentUser.last_name" placeholder="last name"/>
+				</div>
+			</div>
+
+			<div class="sinlgle_form_row">
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="email">Email Address</label>
+					<input id="email" type="text" ng-model="currentUser.email" placeholder="email"/>
+				</div>
+
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="password">Password</label>
+					<div class="password_wrap">
+						<input id="password" type="password" placeholder="*******"/>
+						<a href="">Change Password</a>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-4 padding-left-none">
+					<label for="cell_phone">Cell Phone</label>
+					<input id="cell_phone" type="text" ng-model="currentUser.phone" placeholder=""/>
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="profile_settings">
+
+	<div class="add_patent_wrapper">
+		<div class="sinlgle_form_row">
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="p_email">Personal Email Address</label>
+				<input type="email" id="p_email" ng-model="editProfile.personal_email" placeholder="personal email"/>
+			</div>
+
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="o_phone">Office Phone</label>
+				<input type="phone" id="o_phone" ng-model="editProfile.office_phone" placeholder="eg. 227-490-0727"/>
+			</div>
+
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="p_fax">Fax</label>
+				<input type="phone" id="p_fax" ng-model="editProfile.fax" placeholder="eg. 473-707-7360"/>
+			</div>
+
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="degree">Degree</label>
+				<input type="text" id="degree" ng-model="editProfile.degree" placeholder="degree"/>
+			</div>
+
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="sex">Sex</label>
+				<select id="sex" ng-model="editProfile.sex">
+					<option value="">Male</option>
+					<option value="">Female</option>
+				</select>
+			</div>
+
+
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="specialty">Primary Specialty</label>
+				<input id="specialty" type="text" ng-model="editProfile.primary_specialty" placeholder="eg. Allergy and Immunology"/>
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="Access_Level">Access Level</label>
+				<input id="Access_Level" type="number" ng-model="editProfile.access_level" placeholder="access level"/>
+				<!--<select name="" id="Access_Level">-->
+					<!--<option value="">1 Staff</option>-->
+				<!--</select>-->
+			</div>
+
+			<div class="col-md-6 col-sm-8 padding-left-none">
+				<label for="Primary_Facility">Primary Facility</label>
+				<select id="Primary_Facility" ng-model="editProfile.facility_id" ng-options="facility.id as facility.name for facility in facilities">
+					<option value="">Choose Facility</option>
+				</select>
+				<!--<select name="" id="Primary_Facility">-->
+					<!--<option value="">Facility Name</option>-->
+				<!--</select>-->
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-3 col-sm-4 padding-left-none">
+				<label for="city">City</label>
+				<input id="city" type="text" ng-model="editProfile.city" placeholder="city"/>
+				<!--<select name="" id="city">-->
+					<!--<option value="">CityName</option>-->
+				<!--</select>-->
+			</div>
+
+			<div class="col-md-6 col-sm-8 padding-left-none">
+				<label for="state">State</label>
+				<input id="state" type="text" ng-model="editProfile.state" placeholder="state"/>
+				<!--<select name="" id="state">-->
+					<!--<option value="">Alabama</option>-->
+				<!--</select>-->
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-9 col-sm-12 padding-left-none">
+				<label for="pwa">Practice Web Address</label>
+				<input type="text" id="pwa" placeholder="http://www.liveclinic.com" ng-model="editProfile.practice_web_addr"/>
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-9 col-sm-12 padding-left-none">
+				<label for="biography">Biography</label>
+				<textarea name="" id="biography" placeholder="Enter some text " ng-model="editProfile.biography"></textarea>
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row mt-15">
+			<h5>Fax Credential</h5>
+
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="API Username">Username</label>
+				<input type="text" id="api_username" placeholder="Username" ng-model="editProfile.sfax_username"/>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<label for="API Key">Key</label>
+				<input type="text" id="api_key" placeholder="API Key" ng-model="editProfile.sfax_apikey"/>
+			</div>
+			<div class="col-md-4 col-sm-4 padding-right-none">
+				<label for="API Encryption Key">Encryption Key</label>
+				<input type="password" id="api_enc_key" placeholder="API Encryption Key" ng-model="editProfile.sfax_encryptionkey"/>
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row mt-15">
+			<h5>Direct Message Credential</h5>
+
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="API Username">Username</label>
+				<input type="text" id="api_username" placeholder="Email Address" ng-model="editProfile.phimail_email"/>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<label for="API Key">Key</label>
+				<input type="password" id="api_key" placeholder="Password" ng-model="editProfile.phimail_password"/>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="medical_licences">
+	<div class="add_patent_wrapper">
+		<div class="sinlgle_form_row">
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="l_number">Medical License</label>
+				<input type="text" id="l_number" placeholder="License Number" ng-model="editProfile.medical_license"/>
+			</div>
+
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="Expiration">Expiration</label>
+				<input type="date" id="Expiration" value="10-03-2016" ng-model="editProfile.expiration"/>
+			</div>
+
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="swy">State where you practice medicine</label>
+				<input type="text" id="swy" placeholder="State Name" ng-model="editProfile.state_practiced"/>
+				<!--<select name="" id="swy">-->
+					<!--<option value="">StateName</option>-->
+				<!--</select>-->
+			</div>
+
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="sod">Specialty or degree listed on license</label>
+				<input type="text" id="sod" placeholder="eg. M.D., NP-C" ng-model="editProfile.specialty_on_license"/>
+			</div>
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="sod">DEA Number</label>
+				<input type="text" id="sod" placeholder="Enter Dea Number" ng-model="editProfile.dea_number"/>
+			</div>
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="UPIN">UPIN</label>
+				<input type="text" id="UPIN" placeholder="Enter UPIN Number" ng-model="editProfile.upin"/>
+			</div>
+
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-4 col-sm-4 padding-left-none">
+				<label for="EIN">EIN/TIN</label>
+				<input type="text" id="EIN" placeholder="673748-3182" ng-model="editProfile.ein_tin"/>
+			</div>
+			<div class="col-md-8 col-sm-8 padding-left-none">
+				<label for="npi_number">NPI Number</label>
+				<input type="text" id="npi_number" placeholder="eg. 78367-4132" ng-model="editProfile.npi_number"/>
+			</div>
+		</div>
+
+		<div class="sinlgle_form_row">
+			<div class="col-md-12 col-sm-12 padding-left-none">
+				<label for="NADEAN">NADEAN Number</label>
+				<input type="text" id="NADEAN" placeholder="eg. 047389831100045" ng-model="editProfile.nadean_number"/>
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>
+</div>

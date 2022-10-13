@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  search: MyString
+  shorthand: MyString
+  sig: MyString
+  diagnosis: MyString
+  start_date: 2016-04-21 15:36:21
+  end_date: 2016-04-21 15:36:21
+  dis_reason: MyString
+  comment: MyString
+  status: 1
+  form: MyString
+  dosage: MyString
+  product_no: MyString
+  fev: MyString
+
+two:
+  doctor_id: 
+  patient_id: 
+  search: MyString
+  shorthand: MyString
+  sig: MyString
+  diagnosis: MyString
+  start_date: 2016-04-21 15:36:21
+  end_date: 2016-04-21 15:36:21
+  dis_reason: MyString
+  comment: MyString
+  status: 1
+  form: MyString
+  dosage: MyString
+  product_no: MyString
+  fev: MyString

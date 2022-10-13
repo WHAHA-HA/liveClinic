@@ -1,0 +1,95 @@
+
+
+<div class="forms-page-wrapper">
+    <header class="text-center form-header">
+        <a href=""><img src="/assets/logo.png" alt="Logo"></a>
+    </header>
+
+    <section class="form-wrapper">
+
+        <h3>Sign Up</h3>
+
+        <form ng-submit="handleRegBtnClick()" role="form" ng-init="registrationForm = {}">
+
+            <label for="email">Email (*)</label>
+            <input type="email"
+                   name="registration[email]"
+                   id="email"
+                   ng-model="registrationForm.email"
+                   required="required"
+                   placeholder="e.g. example@mail.com"
+                    />
+
+            <div class="alert alert-danger" role="alert" ng-show="error.email.length>0">
+                <div ng-repeat="msg in error.email">
+                    Email {{msg}}
+                </div>
+            </div>
+
+            <div class="col-sm-6 padding-left-none">
+                <label for="first_name">First Name</label>
+                <input requered type="text"
+                       name="registration[first_name]"
+                       id="first_name"
+                       ng-model="registrationForm.first_name"
+                       required="required"
+                       placeholder="e.g. John">
+            </div>
+
+            <div class="col-sm-6 padding-right-none">
+                <label for="last_name">Last Name</label>
+                <input requered type="text"
+                       name="registration[last_name]"
+                       id="last_name"
+                       ng-model="registrationForm.last_name"
+                       required="required"
+                       placeholder="e.g. Smith">
+            </div>
+
+            <label for="phone">Phone Number</label>
+            <input type="phone"
+                   name="registration[phone]"
+                   id="phone"
+                   ng-model="registrationForm.phone"
+                   required="required"
+                   placeholder="e.g. 123-456-789"
+                    />
+
+            <label for="password">Password (*)</label>
+            <input type="password"
+                   name="registration[password]"
+                   id="password"
+                   ng-model="registrationForm.password"
+                   required="required"
+                   placeholder="*******"
+                    />
+            <div class="alert alert-danger" role="alert" ng-show="error.password.length>0">
+                <div ng-repeat="msg in error.password">
+                    Password {{msg}}
+                </div>
+            </div>
+            <label for="password_confirmation">Confirm Password (*)</label>
+            <input type="password"
+                   name="registration[password_confirmation]"
+                   id="password_confirmation"
+                   ng-model="registrationForm.password_confirmation"
+                   required="required"
+                   placeholder="*******"
+                    />
+            <div class="alert alert-danger" role="alert" ng-show="error.password_confirmation.length>0">
+                <div ng-repeat="msg in error.password_confirmation">
+                    Password confirmation {{msg}}
+                </div>
+            </div>
+            <input type="hidden" name="registration[confirm_success_url]" value="/#/login"/>
+            <button class="button-primary" type=submit>Continue <i class="fa fa-angle-right"></i></button>
+
+        </form>
+
+    </section>
+
+    <div class="clearfix"></div>
+    <footer class="form-footer text-center">
+        <p>Already have an account? <a ng-href="#/sign_in">Sign In</a></p>
+    </footer>
+</div>

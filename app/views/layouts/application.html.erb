@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LiveClinic</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="liveClinic">
+<div ui-view="header"></div>
+
+<section id="main_content">
+  <div ui-view="left-sidebar"></div>
+  <div ui-view="content" class="fade"></div>
+  <div ui-view="right-sidebar"></div>
+</section>
+
+<span us-spinner="{radius:10, width:2, length: 10}" spinner-key="appSpinner" />
+
+</body>
+</html>

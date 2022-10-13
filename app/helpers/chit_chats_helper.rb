@@ -1,0 +1,2 @@
+module ChitChatsHelper
+end

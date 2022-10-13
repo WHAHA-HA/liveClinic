@@ -1,0 +1,47 @@
+<div class="col-md-9 col-sm-7 mess_info_content content_wrapper pull-right">
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="inbox_fax">
+			<div class="welcome-user">
+				<div class="col-sm-8">
+					<h4>Referrals</h4>
+					<p>Short Description goes here ...</p>
+				</div>
+			</div>
+
+			<div class="messages_wrapper">
+				<div class="messagees_title">
+					<div class="col-sm-3">From</div>
+					<div class="col-sm-4">Subject</div>
+					<div class="col-sm-3 text-right">Date</div>
+				</div>
+			</div>
+
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div ng-repeat="mail in data">
+					<div role="tab" id="heading-{{mail.id}}">
+						<div class="single_message_head" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{mail.id}}" aria-expanded="true" aria-controls="collapse-{{mail.id}}">
+							<div class="col-sm-3">{{mail.to}}</div>
+							<div class="col-sm-4">{{mail.title}}</div>
+							<div class="col-sm-3 text-right">{{ mail.created_at | date: 'yyyy-MM-dd h:mma' }}</div>
+							<div class="col-sm-2 text-right">
+								<a href="javascript:;" ng-click="readMailInbox(mail.id)"><i class='fa fa-eye' ng-show="mail.is_read==false"></i></a>
+								<a href="javascript:;" ng-click="deleteMailSent(mail.id)"><i class='fa fa-trash'></i></a>
+							</div>
+						</div>
+					</div>
+					<div id="collapse-{{mail.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{mail.id}}">
+						<div class="panel-body chat_panel">
+							{{mail.content}}
+
+							<div class="mt-15" ng-show="{{mail.file}}">
+								<label>Attachment:&nbsp;</label>
+								<a href="/download/mail/sent/{{mail.id}}"><i class="fa fa-download"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

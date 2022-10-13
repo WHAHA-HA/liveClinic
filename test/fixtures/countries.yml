@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ios: MyString
+  name: MyString
+  nicename: MyString
+  ios3: MyString
+  numcode: 1
+  phonecode: 1
+
+two:
+  ios: MyString
+  name: MyString
+  nicename: MyString
+  ios3: MyString
+  numcode: 1
+  phonecode: 1

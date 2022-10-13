@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  note_subjective: MyString
+  note_objective: MyString
+  note_assessment: MyString
+  note_plan: MyString
+  encounter_id: 
+
+two:
+  doctor_id: 
+  patient_id: 
+  note_subjective: MyString
+  note_objective: MyString
+  note_assessment: MyString
+  note_plan: MyString
+  encounter_id: 

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  birthdate: 2016-04-19 21:04:03
+  pharmacy_phone: MyString
+  address_line: MyString
+  card_id: 1
+  q: MyString
+  dod: MyString
+  mobile_number: MyString
+  home_phone: MyString
+  work_phone: MyString
+  date: 2016-04-19 21:04:03
+  security_number: MyString
+  record_number: MyString
+  country: MyString
+  no_mobile: MyString
+  no_email: MyString
+  send_mobile_text: MyString
+  send_voice: MyString
+  send_email: MyString
+  work_ext: MyString
+  method_of_communication: MyString
+  suite: MyString
+  status: MyString
+
+two:
+  birthdate: 2016-04-19 21:04:03
+  pharmacy_phone: MyString
+  address_line: MyString
+  card_id: 1
+  q: MyString
+  dod: MyString
+  mobile_number: MyString
+  home_phone: MyString
+  work_phone: MyString
+  date: 2016-04-19 21:04:03
+  security_number: MyString
+  record_number: MyString
+  country: MyString
+  no_mobile: MyString
+  no_email: MyString
+  send_mobile_text: MyString
+  send_voice: MyString
+  send_email: MyString
+  work_ext: MyString
+  method_of_communication: MyString
+  suite: MyString
+  status: MyString

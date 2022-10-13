@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: url('/assets/AvenirNextRegular.eot');
+    src: url('/assets/AvenirNextRegular.eot') format('embedded-opentype'),
+         url('/assets/AvenirNextRegular.woff2') format('woff2'),
+         url('/assets/AvenirNextRegular.woff') format('woff'),
+         url('/assets/AvenirNextRegular.ttf') format('truetype'),
+         url('/assets/AvenirNextRegular.svg#AvenirNextRegular') format('svg');
+}
+
+
+@font-face {
+    font-family: 'AvenirNextMedium';
+    src: url('/assets/AvenirNextMedium.eot');
+    src: url('/assets/AvenirNextMedium.eot') format('embedded-opentype'),
+         url('/assets/AvenirNextMedium.woff2') format('woff2'),
+         url('/assets/AvenirNextMedium.woff') format('woff'),
+         url('/assets/AvenirNextMedium.ttf') format('truetype'),
+         url('/assets/AvenirNextMedium.svg#AvenirNextMedium') format('svg');
+}

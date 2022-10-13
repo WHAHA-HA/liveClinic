@@ -1,0 +1,31 @@
+<div class="col-md-2 col-sm-3 message_informations">
+	<div class="message_info_title">
+		<h4>Messages</h4>
+		<p>Short Description</p>
+	</div>
+	<ul class="nav nav-tabs message_tab_title" role="tablist">
+		<li class="active"><a show-tab href="#message_inbox">Inbox</a></li>
+		<li><a show-tab href="#message_sent">Sent Items</a></li>
+	</ul>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="message_content tab-pane active" id="message_inbox">
+			<ul class="nav" role="tablist">
+				<li ui-sref-active="active"><a href ui-sref="messages.inbox-fax">Fax <span>4</span></a></li>
+				<li ui-sref-active="active"><a href ui-sref="messages.inbox-lab-result">Lab Results<span>2</span></a></li>
+				<li ui-sref-active="active"><a href ui-sref="messages.inbox-referrals">Referrals<span>3</span></a></li>
+				<li ui-sref-active="active"><a href ui-sref="messages.inbox-patient-message">Patient Message<span>5</span></a></li>
+			</ul>
+		</div>
+
+		<div role="tabpanel" class="tab-pane message_content" id="message_sent">
+			<ul class="nav">
+				<li ui-sref-active="active"><a href ui-sref="messages.sent-fax">Fax <span>4</span></a></li>
+				<li ui-sref-active="active"><a href ui-sref="messages.sent-referrals">Referrals<span>2</span></a></li>
+				<li ui-sref-active="active"><a href ui-sref="messages.sent-patient-message">Patient Message<span>8</span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div ui-view="inner-content"></div>

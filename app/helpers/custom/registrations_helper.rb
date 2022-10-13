@@ -1,0 +1,2 @@
+module Custom::RegistrationsHelper
+end

@@ -1,0 +1,75 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  children: 1
+  tobacco_no: 1
+  tobacco_daily: 1
+  tobacco_weekly: 1
+  tobacco_former: 1
+  alcohol_no: 1
+  alcohol_daily: 1
+  alcohol_weekly: 1
+  alcohol_less: 1
+  alcohol_former: 1
+  ex_mod: 1
+  ex_vig: 1
+  sed: 1
+  caff_no: 1
+  caff_daily: 1
+  caff_weekly: 1
+  caff_less: 1
+  caff_former: 1
+  fm_che: 1
+  fm_pipe: 1
+  fm_cig: 1
+  fm_cigarette: 1
+  fm_beer: 1
+  fm_liquor: 1
+  fm_other: 1
+  changes: 1
+  chocolate: 1
+  coffee: 1
+  soda: 1
+  tea: 1
+  tablet: 1
+  c_other: 1
+  fm_smokeless: 1
+  how_many: 1
+
+two:
+  patient_id: 
+  children: 1
+  tobacco_no: 1
+  tobacco_daily: 1
+  tobacco_weekly: 1
+  tobacco_former: 1
+  alcohol_no: 1
+  alcohol_daily: 1
+  alcohol_weekly: 1
+  alcohol_less: 1
+  alcohol_former: 1
+  ex_mod: 1
+  ex_vig: 1
+  sed: 1
+  caff_no: 1
+  caff_daily: 1
+  caff_weekly: 1
+  caff_less: 1
+  caff_former: 1
+  fm_che: 1
+  fm_pipe: 1
+  fm_cig: 1
+  fm_cigarette: 1
+  fm_beer: 1
+  fm_liquor: 1
+  fm_other: 1
+  changes: 1
+  chocolate: 1
+  coffee: 1
+  soda: 1
+  tea: 1
+  tablet: 1
+  c_other: 1
+  fm_smokeless: 1
+  how_many: 1

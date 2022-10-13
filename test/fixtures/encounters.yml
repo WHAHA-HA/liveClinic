@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  patient_id: 
+  encounter_type: MyString
+  note_type: MyString
+  date: 2016-04-21 15:14:51
+  seen_by: MyString
+  facility: MyString
+  status: 1
+  chief: MyText
+
+two:
+  doctor_id: 
+  patient_id: 
+  encounter_type: MyString
+  note_type: MyString
+  date: 2016-04-21 15:14:51
+  seen_by: MyString
+  facility: MyString
+  status: 1
+  chief: MyText

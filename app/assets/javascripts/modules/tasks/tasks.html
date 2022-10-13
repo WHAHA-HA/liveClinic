@@ -1,0 +1,101 @@
+<div class="col-md-8 col-sm-7 content_wrapper ng-scope">
+	<div class="welcome-user">
+		<div class="col-sm-6">
+			<h4>Tasks</h4>
+			<p>Short Description goes here ...</p>
+		</div>
+		<div class="col-sm-6">
+			<button class="button-primary pull-right" data-toggle="modal" data-target="#new_task_modal" ng-click='newTask()'>Add New Task</button>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal custom_modal fade" id="new_task_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4>{{ task.id ? "Edit Task" : "Add New Task" }}</h4>
+				</div>
+				<div class="modal-body">
+					<label for="task_name">Enter Task Name:</label>
+					<input type="text" placeholder="ex. send lab order for patient John Doe" ng-model="task.name" />
+					<div class="col-sm-7 padding-left-none">
+						<label for="patient">Patient:</label>
+						<select ng-model="task.patient_id" ng-options="pt.id as ( pt.f_name + '&nbsp;' + pt.l_name ) for pt in patients | orderBy:'f_name'">
+						</select>
+					</div>
+					<div class="col-sm-5 padding-left-none">
+						<label for="due_date">Due Date:</label>
+						<div class="dropdown mb-10">
+							<a class="dropdown-toggle" id="dropdown-due-date" role="button" data-toggle="dropdown">
+								<div class="input-group">
+									<input type="text" class="form-control" data-ng-model="task.due_date" data-date-time-input="YYYY-MM-DD HH:mm:ss" style="height: 53px;">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+								</div>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<datetimepicker data-ng-model="task.due_date" data-datetimepicker-config="{ dropdownSelector: '#dropdown-due-date' }" />
+							</ul>
+						</div>
+					</div>
+					<label for="assign_to">Assign To:</label>
+					<select ng-model="task.provider_id" ng-options="pv.id as ( pv.user_attributes.first_name + '&nbsp;' + pv.user_attributes.last_name ) for pv in providers">
+					</select>
+					<p>Task Description:</p>
+					<textarea placeholder="Enter text" ng-model="task.desc"></textarea>
+					<button class="button-primary" data-dismiss="modal" ng-click="saveTask()">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tasks_wrapper">
+		<ul class="nav profile_nav" role="tablist">
+			<li role="presentation" class="active"><a show-tab href="#open_tasks" aria-controls="open_tasks" role="tab" data-toggle="tab" aria-expanded="true">Open</a></li>
+			<li role="presentation" class=""><a show-tab href="#closed_tasks" aria-controls="closed_tasks" role="tab" data-toggle="tab" aria-expanded="false">Closed</a></li>
+		</ul>
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active container-fluid" id="open_tasks">
+				<div class="single_task alert alert-warning alert-dismissible row" role="alert" ng-repeat="tt in tasks | filter: filterNotDone">
+					<div class="col-sm-2">
+						<p><span class="color-gray">{{ diffCalc( tt.updated_at ) }} ago</span></p>
+					</div>
+					<div class="col-sm-7">
+						<p>{{ tt.name }} <a ui-sref="edit-patient({ patientId: {{ tt.patient.id }} })" ng-click="$event.stopPropagation()">{{ tt.patient.f_name }} {{ tt.patient.l_name }}</a></p>
+					</div>
+					<div class="col-sm-3">
+						<div class="paid_date {{ duePassed(tt.due_date) }}">
+							<p>Due {{ tt.due_date | date: 'mediumDate'}}</p>
+						</div>
+
+						<div class="command-buttons pull-right">
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-cog"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="javascript:;" data-toggle="modal" data-target="#new_task_modal" ng-click="loadTask( tt )">Edit Task</a></li>
+								<li><a href="javascript:;" ng-click="removeTask(tt.id)">Remove Task</a></li>
+							</ul>
+						</div>
+						
+						<div class="task_stutus" data-dismiss="alert" aria-label="Close" ng-click="markAsDone( tt.id ); $event.stopPropagation()"><i class="fa fa-check" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane container-fluid" id="closed_tasks">
+				<div class="single_task alert alert-warning alert-dismissible row" role="alert" ng-repeat="tt in tasks | filter: filterDone">
+					<div class="col-sm-2">
+						<p><span class="color-gray">{{ diffCalc( tt.updated_at ) }} ago</span></p>
+					</div>
+					<div class="col-sm-7">
+						<p>{{ tt.name }} <a ui-sref="edit-patient({ patientId: {{ tt.patient.id }} })">{{ tt.patient.f_name }} {{ tt.patient.l_name }}</a></p>
+					</div>
+					<div class="col-sm-3">
+						<div class="paid_date {{ duePassed(tt.due_date) }}">
+							<p>Due {{ tt.due_date | date: 'mediumDate'}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

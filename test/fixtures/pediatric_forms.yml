@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  pri_m: MyString
+  pri_f: MyString
+  pri_b: MyString
+  pri_s: MyString
+  pri_both: MyString
+  pri_other: MyString
+  sec_m: MyString
+  sec_f: MyString
+  sec_other: MyString
+  rel: MyString
+  ch_m: MyString
+  ch_f: MyString
+  ch_sibling: MyString
+  ch_gra: MyString
+  ch_nanny: MyString
+  ch_day_care: MyString
+  tobacco: MyString
+  smokers: MyString
+  cur_smokers: MyString
+
+two:
+  patient_id: 
+  pri_m: MyString
+  pri_f: MyString
+  pri_b: MyString
+  pri_s: MyString
+  pri_both: MyString
+  pri_other: MyString
+  sec_m: MyString
+  sec_f: MyString
+  sec_other: MyString
+  rel: MyString
+  ch_m: MyString
+  ch_f: MyString
+  ch_sibling: MyString
+  ch_gra: MyString
+  ch_nanny: MyString
+  ch_day_care: MyString
+  tobacco: MyString
+  smokers: MyString
+  cur_smokers: MyString

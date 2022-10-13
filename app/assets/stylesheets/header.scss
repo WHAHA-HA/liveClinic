@@ -1,0 +1,9 @@
+.profile-info .profile-name {    
+    max-width: 120px;
+    min-width: 120px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}

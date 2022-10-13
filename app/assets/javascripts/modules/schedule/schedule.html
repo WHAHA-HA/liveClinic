@@ -1,0 +1,108 @@
+<div class="col-md-8 col-sm-7 content_wrapper ng-scope">
+	<div class="welcome-user">
+		<div class="col-sm-6">
+			<h4>Schedule</h4>
+				<p>Short Description goes here ...</p>
+		</div>
+		<div class="col-sm-6">
+			<button class="button-primary pull-right" data-toggle="modal" data-target="#add_appoinment_modal">Add</button>
+		</div>
+	</div>
+
+	<div ui-calendar="calendar" ng-model="eventData" ng-option='calendarOption'></div>
+</div>
+
+<div class="modal custom_modal practice_modal fade" id="add_appoinment_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header left_header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h5>Add New Appointment</h5>
+			</div>
+			<div class="modal-body appoinment_modal_body">
+				<div class="col-sm-6 padding-left-none">
+					<label for="patient">Patient<span class="color-red">*</span></label>
+					<select id="patient" ng-model="appointment.patient" ng-options="pt.id as ( pt.f_name + '&nbsp;' + pt.l_name ) for pt in patients track by pt.f_name">
+					</select>
+				</div>
+
+				<div class="clearfix"></div>
+				<br>
+				<h3>Appoinment Detaills</h3>
+				<hr />
+				<div class="clearfix"></div>
+
+				<div class="col-sm-6 padding-left-none">
+					<label for="Provider">Provider<span class="color-red">*</span></label>
+					<select id="Provider" ng-model="appointment.provider" ng-options="pv.id as ( pv.user_attributes.first_name + '&nbsp;' + pv.user_attributes.last_name ) for pv in providers">
+					</select>
+				</div>
+
+				<div class="col-sm-6 padding-left-none">
+					<label for="Facility">Facility<span class="color-red">*</span></label>
+					<select id="Facility" ng-model="appointment.facility" ng-options="fc.id as fc.name for fc in facilities">
+					</select>
+				</div>
+				<div class="col-sm-12 padding-left-none">
+					<p>Cheif Complant</p>
+					<textarea placeholder="Enter text" ng-model="appointment.complant"></textarea>
+				</div>
+				<div class="col-sm-6 padding-left-none">
+					<label for="at">Appoinment type<span class="color-red">*</span></label>
+					<select id="at" ng-model="appointment.at">
+						<option value="">Follow-Up visit</option>
+					</select>
+				</div>
+ 
+				<div class="col-sm-6 padding-left-none">
+					<label for="Duration">Duration<span class="color-red">*</span></label>
+					<input id="Duration" type="number" value="{{ duration() }}" disabled/>
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-sm-5 padding-left-none">
+					<label for="when">When<span class="color-red">*</span></label>
+
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-when" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="appointment.when" data-date-time-input="YYYY-MM-DD HH:mm:ss">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="appointment.when" data-datetimepicker-config="{ dropdownSelector: '#dropdown-when' }" />
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-5">
+					<label for="end_time">End time<span class="color-red">*</span></label>
+
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-endtime" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="appointment.end_time" data-date-time-input="YYYY-MM-DD HH:mm:ss">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="appointment.end_time" data-datetimepicker-config="{ dropdownSelector: '#dropdown-endtime' }" />
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-2 padding_for_check">
+					<input type="checkbox" id="repeat" ng-model="appointment.repeat"/>
+					<label for="repeat">Repeat</label>
+				</div>
+
+				<div class="clearfix"></div><br>
+
+				<div class="clearfix">
+					<button type="submit" class="button-primary button-green pull-right" ng-click="addAppointment()" data-dismiss="modal">Save</button>
+					<button type="button" class="button-primary btn-danger pull-left" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 
+  name: MyString
+  phone: MyString
+  fax: MyString
+  address: MyString
+  suite: MyString
+  zip: MyString
+  city: MyString
+  country_code: MyString
+  date: 2016-04-21 15:28:42
+  status: 1
+
+two:
+  doctor_id: 
+  name: MyString
+  phone: MyString
+  fax: MyString
+  address: MyString
+  suite: MyString
+  zip: MyString
+  city: MyString
+  country_code: MyString
+  date: 2016-04-21 15:28:42
+  status: 1

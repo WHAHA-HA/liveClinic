@@ -1,0 +1,217 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+	<div class="welcome-user">
+		<div class="col-sm-6">
+			<h4>Add Patient</h4>
+			<p>Short Description goes here ...</p>
+		</div>
+		<div class="col-sm-6">
+			<a ui-sref="charts" class="button-primary button-secondary pull-right">Cancel</a>
+			<button class="button-primary pull-right" ng-click="savePatient()">Save</button>
+		</div>
+	</div>
+	<div class="add_patent_wrapper">
+		<form>
+			<div class="change_avater_wrap clearfix">
+				<img class="align-left avatar-75" src="{{ patient.avatar ? patient.avatar : 'assets/avater-75x75.png' }}" alt="">
+				<div class="upload_wrap pull-left">
+					<!--input class="input-file" id="my-file" type="file" -->
+					<div class="mb-10">Profile Picture</div>
+
+					<button type="file" ngf-select="uploadFile($file)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="input-file-trigger">Choose File</button>
+
+					<p class="file-return"></p>
+				</div>
+			</div>
+
+			<h4>Patient Identifying details</h4>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="f_name">First Name</label>
+					<input type="text" placeholder="ex. John" class="form-control" ng-model="patient.f_name">
+				</div>
+				<div class="col-md-3">
+					<label for="m_name">Middle Name</label>
+					<input type="text" placeholder="ex. John" class="form-control" ng-model="patient.m_name">
+				</div>
+				<div class="col-md-3">
+					<label for="l_name">Last Name</label>
+					<input type="text" placeholder="ex. Doe" class="form-control" ng-model="patient.l_name">
+				</div>
+				<div class="col-md-3">
+					<label for="n_name">Nick Name</label>
+					<input type="text" placeholder="ex.Johny" class="form-control" ng-model="patient.n_name">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Home Phone</label>
+					<input type="text" placeholder="" class="form-control" ng-model="patient.home_phone">
+				</div>
+				<div class="col-md-3">
+					<label for="">Work Phone</label>
+					<input type="text" placeholder="" class="form-control" ng-model="patient.work_phone">
+				</div>
+				<div class="col-md-3">
+					<label for="">Mobile Phone</label>
+					<input type="text" placeholder="" class="form-control" ng-model="patient.mobile_number">
+				</div>
+				<div class="col-md-3">
+					<label for="">Email</label>
+					<input type="email" class="form-control" ng-model="patient.email">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">State</label>
+					<input type="text" class="form-control" ng-model="patient.state">
+				</div>
+				<div class="col-md-3">
+					<label for="">City</label>
+					<input type="text" class="form-control" ng-model="patient.city">
+				</div>
+				<div class="col-md-3">
+					<label for="">Address</label>
+					<input type="text" class="form-control" ng-model="patient.address">
+				</div>
+				<div class="col-md-3">
+					<label for="">Zip</label>
+					<input type="text" class="form-control" ng-model="patient.zip">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Date of Birth</label>
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-patient-dob" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="patient.dob" data-date-time-input="YYYY-MM-DD">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="patient.dob" data-datetimepicker-config="{ dropdownSelector: '#dropdown-patient-dob', startView:'day', minView:'day' }" />
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="">Last Visit Date</label>
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-patient-lvd" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="patient.lvd" data-date-time-input="YYYY-MM-DD">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="patient.lvd" data-datetimepicker-config="{ dropdownSelector: '#dropdown-patient-lvd', startView:'day', minView:'day' }" />
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="">Gender</label>
+					<select class="form-control" ng-model="patient.gender">
+						<option value=""></option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+			</div>
+
+			<h4>Insurance</h4>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Social Security Number</label>
+					<input type="text" class="form-control" ng-model="patient.ssn">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Company</label>
+					<input type="text" class="form-control" ng-model="patient.insurance_company">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance ID</label>
+					<input type="text" class="form-control" ng-model="patient.insurance_id">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Group Number</label>
+					<input class="form-control" ng-model="patient.ign">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Insurance Subscriber Name</label>
+					<input type="text" class="form-control" ng-model="patient.isn">
+				</div>
+				<div class="col-md-3">
+					<label for="">Ins. Subscriber DOB</label>
+					
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-patient-ins-subscriber-dob" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="patient.ins_subscriber_dob" data-date-time-input="YYYY-MM-DD">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="patient.ins_subscriber_dob" data-datetimepicker-config="{ dropdownSelector: '#dropdown-patient-ins-subscriber-dob', startView:'day', minView:'day' }" />
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Subscriber SSN</label>
+					<input type="text" class="form-control" ng-model="patient.ins_subscriber_ssn">
+				</div>
+			</div>
+
+			<h4>Secondary Insurance</h4>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Social Security Number</label>
+					<input type="text" class="form-control" ng-model="patient.sec_ssn">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Company</label>
+					<input type="text" class="form-control" ng-model="patient.sec_insurance_company">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance ID</label>
+					<input type="text" class="form-control" ng-model="patient.sec_insurance_id">
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Group Number</label>
+					<input class="form-control" ng-model="patient.sec_ign">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="">Insurance Subscriber Name</label>
+					<input type="text" class="form-control" ng-model="patient.sec_isn">
+				</div>
+				<div class="col-md-3">
+					<label for="">Ins. Subscriber DOB</label>
+
+					<div class="dropdown">
+						<a class="dropdown-toggle" id="dropdown-patient-sec-ins-subscriber-dob" role="button" data-toggle="dropdown">
+							<div class="input-group">
+								<input type="text" class="form-control" data-ng-model="patient.sec_ins_subscriber_dob" data-date-time-input="YYYY-MM-DD">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<datetimepicker data-ng-model="patient.sec_ins_subscriber_dob" data-datetimepicker-config="{ dropdownSelector: '#dropdown-patient-sec-ins-subscriber-dob', startView:'day', minView:'day' }" />
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="">Insurance Subscriber SSN</label>
+					<input type="text" class="form-control" ng-model="patient.sec_ins_subscriber_ssn">
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<hr/>
+
+			<button href="javascript:;" class="button-primary" ng-click="savePatient()">Save</button>
+		</form>
+	</div>
+</div>

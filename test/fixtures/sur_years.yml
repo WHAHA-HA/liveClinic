@@ -1,0 +1,87 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  name1: MyString
+  name2: MyString
+  name3: MyString
+  name4: MyString
+  name5: MyString
+  name6: MyString
+  name7: MyString
+  name8: MyString
+  name9: MyString
+  name10: MyString
+  name11: MyString
+  name12: MyString
+  name13: MyString
+  name14: MyString
+  name15: MyString
+  name16: MyString
+  name17: MyString
+  name18: MyString
+  name19: MyString
+  name20: MyString
+  name21: MyString
+  name22: MyString
+  name23: MyString
+  name24: MyString
+  name25: MyString
+  name26: MyString
+  name27: MyString
+  name28: MyString
+  name29: MyString
+  name30: MyString
+  name31: MyString
+  name32: MyString
+  name33: MyString
+  name34: MyString
+  name35: MyString
+  name36: MyString
+  name37: MyString
+  name38: MyString
+  name39: MyString
+  name40: MyString
+
+two:
+  patient_id: 
+  name1: MyString
+  name2: MyString
+  name3: MyString
+  name4: MyString
+  name5: MyString
+  name6: MyString
+  name7: MyString
+  name8: MyString
+  name9: MyString
+  name10: MyString
+  name11: MyString
+  name12: MyString
+  name13: MyString
+  name14: MyString
+  name15: MyString
+  name16: MyString
+  name17: MyString
+  name18: MyString
+  name19: MyString
+  name20: MyString
+  name21: MyString
+  name22: MyString
+  name23: MyString
+  name24: MyString
+  name25: MyString
+  name26: MyString
+  name27: MyString
+  name28: MyString
+  name29: MyString
+  name30: MyString
+  name31: MyString
+  name32: MyString
+  name33: MyString
+  name34: MyString
+  name35: MyString
+  name36: MyString
+  name37: MyString
+  name38: MyString
+  name39: MyString
+  name40: MyString

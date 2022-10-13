@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  doctor_id: 
+  encounter_id: 
+  chit_chat: MyString
+  status: 1
+  date: 2016-04-21 15:17:08
+
+two:
+  patient_id: 
+  doctor_id: 
+  encounter_id: 
+  chit_chat: MyString
+  status: 1
+  date: 2016-04-21 15:17:08

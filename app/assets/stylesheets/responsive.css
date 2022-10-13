@@ -1,0 +1,323 @@
+
+/*@media only screen and (min-width: 2000px) {
+    #main_content, #header{
+        max-width:2000px;
+        margin:0 auto;
+        position:relative;
+    }
+    #header{
+        left:50%;
+        position:fixed;
+        transform: translate(00%, -0%);
+        -moz-transform: translate(-50%, -0%);
+        -webkit-transform: translate(-50%, -0%);
+        -o-transform: translate(-50%, -0%);
+        background:#fff;
+    }
+
+}
+*/
+
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1280px) { 
+
+
+    .notifacation .notify_icon{
+        margin-left:0px;
+        margin-right:10px;
+    }
+    .input_four_half{
+        margin-right: 5px;
+    }
+    
+
+
+}
+
+/* Medium Layout: 1200px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+.header-right{
+    width:85%
+}
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.header-right{
+    width:80%
+}
+
+    .informations_right{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .search_wrap input[type="text"]{
+        widows: 80%
+    }
+    
+    
+    .header-right {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .right_info{
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+}
+
+    .desktop_only{
+        display: block;
+    }
+    .mobile_only{
+display: none;
+    }
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    .message_informations{
+        width:inherit;
+    }
+    .mess_info_content.content_wrapper{
+        width:100%
+    }
+    
+        .search_wrap input[type="text"]{
+        widows: 70%;
+    }
+    
+    .desktop_only{
+        display: none;
+    }
+    .mobile_only{
+display: block;
+    }
+    .header-right.mobile_margin_fix{
+        margin-bottom: 0px;
+    }
+    .header-right.mobile_only{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }   
+.right_menu {
+  padding-top: 98px;
+}
+    
+    .forms-page-wrapper{
+        width: 100%;
+    }
+    .padding-right-none{
+        padding: inherit;
+    }
+    .padding-left-none{
+        padding: inherit;
+    }
+
+.col-sm-1.right_menu.pull-left, .col-sm-11.wrapper_bg.pull-right {
+  float: none !important;
+}
+    .wrapper_bg{
+        padding-right:15px;
+    }
+    .content_wrapper{
+        padding:0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .right_menu ul{
+        text-align: left;
+    }
+    .right_menu ul li a{
+    text-align: left;
+        padding-left: 15px;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    .right_menu ul li.active{
+        border:none;
+    }
+    .right_menu ul li a img{
+        display:inline-block;
+        margin:0px;
+        margin-right:5px;
+    }
+    
+.nav_spaner {
+  background: rgba(0, 0, 0, 0) url("../img/nav_spaner.png") no-repeat scroll 0 0;
+  height: 50px;
+  width: 50px;
+  display: block;
+margin-right: 15px;
+margin-top: 15px;
+  float: right;
+  cursor: pointer;
+    
+}
+    .right_menu{
+        overflow: hidden;
+        height: auto;
+        margin-bottom: 10px;
+
+    }
+    .main-menu{
+        display: none;
+        
+    }
+    .header-right{
+        margin-left: 0px;
+        margin-top:10px;
+        margin-bottom: 10px;
+        box-shadow: none;
+    }
+    .profile-info{
+        float: right;
+    }
+    .informations_right{
+        box-shadow: none;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+        .notifacation {
+          display: inline-block;
+          float: left;
+          margin-right: 5px;
+        }
+    .notifacation .notify_icon{
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    #main_content{
+        display: inherit;
+    }
+    .profile-info {
+      float: right;
+      width: 200px;
+    }
+    .search_wrap input[type="text"]{
+        width: 100%;
+        margin-bottom: 10px;
+    border: 1px solid #ccc;}
+
+    .right-bar{
+        padding:5px;
+        display:inline-block;
+        float:left;
+    }
+    .header-right{
+        padding:0px;
+    }
+    .user-current-stutus{
+        padding-left:0px;
+        text-align: center
+    }
+    .welcome-user{
+        text-align: center
+    }
+    
+    .search_wrap input[type="text"]{
+        widows: 80%
+    }
+    .icon_wrap > span{
+        right: -10px;
+    }
+    
+    .col-md-3.col-sm-4.right_info{
+        margin-left: -50px;
+    }
+    .notifications{
+        right: inherit;
+        left:-10px;
+        top: 46px;
+    }
+    .notifications:before{
+
+        right: inherit;
+        left: 10px;
+    }
+    
+    .right_menu, .informations_right{
+position: unset;}
+    .informations_right{
+padding-top:15px;}
+
+    .task_stutus{
+        float: left;
+        margin-left: 15px;
+    }
+    .single_task{
+        text-align: center;
+    }
+    .paid_date, .task_stutus{
+        float: none;
+    }
+    .task_stutus{
+        margin: 0 auto;
+    }
+    .single_ehr_urers img{
+        float: none;
+    }
+    .single_ehr_urers{
+        text-align: center;
+    }
+    .message_informations{
+        position: unset;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .single_swith_box {
+      margin-right: 0;
+      width: 100%;
+    }
+    .enc_comment{
+        margin-bottom: 20px;
+    }
+    
+    .right_menu, .right-bar{
+        max-width:100%;
+    }
+
+    .content_wrapper{
+        width:100%;
+        left:0
+    }
+    .informations_right{
+        width:100%
+    }
+    
+    .header-right {
+  float: right;
+  padding: 0;
+  width: 225px;
+}
+.right_menu{
+    width:100%;
+    z-index:inherit;
+}
+.message_informations{
+    margin-left:0px;
+    width:100%;
+    padding-top:25px;
+}
+.mess_info_content.content_wrapper{
+    padding-left:15px;
+    padding-right:15px;
+}
+#header{
+    max-height:105px;
+}
+.search_wrap{
+padding-left:15px;
+padding-top:5px;
+padding-bottom:5px;
+width:180px 
+}
+.right_info{
+    padding-top:0px;
+    width:250px;
+    padding-bottom:5px;
+}
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+}

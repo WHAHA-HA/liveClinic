@@ -1,0 +1,2 @@
+module CtpCodesHelper
+end

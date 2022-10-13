@@ -1,0 +1,114 @@
+<div class="col-md-8 col-sm-7 content_wrapper ng-scope">
+	<div class="welcome-user">
+		<div class="col-sm-8">
+			<h4>Patients</h4>
+			<p>Short Description goes here ...</p>
+		</div>
+		<div class="col-sm-4">
+			<a href="javascript:;" ui-sref="add-patient" class="button-primary pull-right">Add Patient</a>
+		</div>
+	</div>
+	<div class="custom_hr_scroller">
+		<div class="orders_wrapper">
+			<div class="col-sm-3 padding-left-none">
+				<select name="" id="">
+					<option value="">All Providers</option>
+					<option value="">Providers</option>
+					<option value="">Another Providers</option>
+					<option value="">Providers</option>
+				</select>
+			</div>
+			<div class="col-sm-5 padding-left-none">
+				<input class="search_input" type="text" placeholder="Search patients" />
+			</div>
+			<div class="col-sm-2 padding-left-none">
+				<div class="schedule_input">
+					<input type="checkbox" id="schedule_only" />
+					<label for="schedule_only">Scheduled</label>
+				</div>
+			</div>
+			<div class="col-sm-2 padding-left-none">
+				<div class="schedule_input">
+					<input type="checkbox" id="inactive" />
+					<label for="inactive">Inactive</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="customer_lists">
+		<div class="single_customer_list single_customer_list_header">
+			<div style="padding-left:60px;" class="col-md-3 col-sm-12 custom_width_name padding_right_5">
+				Name <span type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i></span>
+				<ul class="dropdown-menu">
+					<li><a href="#">ASC</a></li>
+					<li><a href="#">DSC</a></li>
+					<li><a href="#">Top ratead</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 col-sm-12 custom_width_gen padding_right_5 padding_left_5">
+				DOB <span type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i></span>
+				<ul class="dropdown-menu">
+					<li><a href="#">ASC</a></li>
+					<li><a href="#">DSC</a></li>
+					<li><a href="#">Top ratead</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-12 padding_right_5 padding_left_5">
+				Address <span type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i></span>
+				<ul class="dropdown-menu">
+					<li><a href="#">ASC</a></li>
+					<li><a href="#">DSC</a></li>
+					<li><a href="#">Top ratead</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 col-sm-12 padding_right_5 padding_left_5">
+				Phone Number <span type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i></span>
+				<ul class="dropdown-menu">
+					<li><a href="#">ASC</a></li>
+					<li><a href="#">DSC</a></li>
+					<li><a href="#">Top ratead</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 col-sm-12 padding_right_5 padding_left_5">
+				Last Visit <span type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i></span>
+				<ul class="dropdown-menu">
+					<li><a href="#">ASC</a></li>
+					<li><a href="#">DSC</a></li>
+					<li><a href="#">Top ratead</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		<a ui-sref="edit-patient({ patientId: {{patient.id}} })" ng-repeat="patient in patients">
+			<div class="single_customer_list">
+				<div class="col-sm-3 custom_width_name">
+					<div class="imageblock">
+						<img class="notifimage avatar-40" src="{{ patient.avatar ? patient.avatar : 'assets/collapse_avater_1.png' }}">
+					</div>
+					<div class="info_block">
+						{{patient.f_name}} {{patient.m_name}} {{patient.l_name}}
+						<br><span>{{patient.email}}</span>
+					</div>
+				</div>
+				<div class="col-sm-2 custom_width_gen">
+					{{patient.dob | date:'yyyy-MM-dd'}}
+					<br>{{patient.gender}}
+				</div>
+				<div class="col-sm-3">
+					{{patient.address}}
+					<br>{{patient.city}}
+				</div>
+				<div class="col-sm-2">
+					{{patient.home_phone}}
+					<br>{{patient.work_phone}}
+				</div>
+				<div class="col-sm-2">
+					{{patient.updated_at | date:'yyyy-MM-dd'}}
+					<br>{{patient.updated_at | date:'h:mma'}}
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

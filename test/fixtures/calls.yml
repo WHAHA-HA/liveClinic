@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  call_time: 1
+  calls_col: 1
+  request_id: 1
+
+two:
+  call_time: 1
+  calls_col: 1
+  request_id: 1

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appl_no: MyString
+  product_no: MyString
+  form: MyString
+  dosage: MyString
+  product_mkt_status: MyString
+  te_code: MyString
+  reference_drug: MyString
+  m_name: MyString
+  active_ingred: MyString
+
+two:
+  appl_no: MyString
+  product_no: MyString
+  form: MyString
+  dosage: MyString
+  product_mkt_status: MyString
+  te_code: MyString
+  reference_drug: MyString
+  m_name: MyString
+  active_ingred: MyString

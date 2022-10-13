@@ -1,0 +1,27 @@
+<div class="col-md-8 col-sm-7 content_wrapper">
+    <div class="welcome-user">
+        <h4>Welcome, Dr. {{user.last_name}}</h4>
+        <p>Friday April 8, 2016 8:58 AM</p>
+    </div>
+
+    <div class="user-current-stutus">
+        <div class="col-sm-3">
+            <h2>5</h2>
+            <p>Appointments Today</p>
+        </div>
+        <div class="col-sm-3">
+            <h2>8</h2>
+            <p>Unread Messages</p>
+        </div>
+        <div class="col-sm-3">
+            <h2>0</h2>
+            <p>Missed Calls</p>
+        </div>
+        <div class="col-sm-3">
+            <h2>42</h2>
+            <p>New Requests</p>
+        </div>
+    </div>
+
+    <div ui-calendar="calendar" ng-model="eventData" ng-option='calendarOption'></div>
+</div>

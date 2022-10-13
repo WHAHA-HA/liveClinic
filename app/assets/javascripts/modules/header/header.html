@@ -1,0 +1,117 @@
+<header id="header">
+	<div class="right-bar text-center">
+		<a href="#"><img src="assets/logo-icon.png" alt="Logo icon"></a>
+	</div>
+
+	<div class="search_wrap col-md-9 col-sm-8">
+		<input type="text" placeholder="Search">
+		<input type="submit">
+	</div>
+
+	<div class="right_info">
+		<div class="notifacation">
+			<li class="notify_icon notificationicon on" ng-class="{'open': openMenu}" ng-click="toggleMenu()"></li>
+			<ul id="notificationMenu" class="notifications" ng-class="{'open': openMenu}">
+				<li class="titlebar">
+					<span class="title">Notifications</span>
+					<span class="settings"><i class="icon-cog"></i>
+					</span>
+				</li>
+				<div class="notifbox">
+					<li class="notif unread">
+						<a href="#">
+							<div class="imageblock">
+								<img src="/assets/collapse_avater_1.png" class="notifimage"  />
+							</div>
+							<div class="messageblock">
+								<div class="message">This guy <strong>Jonesy</strong> has just built a tower.
+								</div>
+								<div class="messageinfo">
+									<i class="icon-trophy"></i>2 hours ago
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="notif unread">
+						<a href="#">
+							<div class="imageblock">
+								<img src="/assets/collapse_avater_2.png" class="notifimage"  />
+							</div>
+							<div class="messageblock">
+								<div class="message">
+									<strong>Pete Nawara</strong> want's to drink beer with you
+								</div>
+								<div class="messageinfo">
+									<i class="icon-flag"></i>3 hour ago
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class=" notif">
+						<a href="#">
+							<div class="imageblock"><img src="/assets/collapse_avater_3.png" class="notifimage" />
+							</div>
+							<div class="messageblock">
+								<div class="message"><strong>Gary LaPlante</strong> has talked some trash: "<em>Buncha bitches.</em>
+								</div>
+								<div class="messageinfo">
+									<i class="icon-comment"></i>4 hours ago
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class=" notif">
+						<a href="#">
+							<div class="imageblock"><img src="/assets/collapse_avater_4.png" class="notifimage" /></div>
+							<div class="messageblock">
+								<div class="message"><strong>Jason Nawara</strong> is probably playing <strong>Smite</strong> right now.
+								</div>
+								<div class="messageinfo"><i class="icon-trophy"></i>Yesterday</div>
+							</div>
+						</a>
+					</li>
+					<li class=" notif">
+						<a href="#">
+							<div class="imageblock"><img src="/assets/collapse_avater_1.png" class="notifimage"  />
+							</div>
+							<div class="messageblock">
+								<div class="message"><strong>Danny DK12</strong> got a sweet fade!</div>
+
+								<div class="messageinfo"><i class="icon-flag"></i>Yesterday</div>
+							</div>
+						</a>
+					</li>
+					<li class=" notif">
+						<a href="#">
+							<div class="imageblock"><img src="/assets/collapse_avater_2.png" class="notifimage"  /></div>
+							<div class="messageblock">
+								<div class="message"><strong>Roidberg</strong> left you a comment: "<em>Hey buddy! Nice toenails!"</em></div>
+								<div class="messageinfo"><i class="icon-comment"></i>2 hours ago</div>
+							</div>
+						</a>
+					</li>
+				</div>
+				<li class="seeall">
+					<a href="">See All</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="dropdown profile-info pull-right">
+			<div class="drop_click" type="button" data-toggle="dropdown">
+				<img src="{{ currentUser.avatar ? currentUser.avatar : '/assets/avatar.png' }}" class="avatar-42" alt="">
+				<div><div class="profile-name">{{user.first_name}} {{user.last_name}}</div> <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+				<span>{{user.title ? user.title : "No Title"}}</span>
+			</div>
+
+			<ul class="dropdown-menu">
+				<li><a href="#/my-practice">My Practice</a></li>
+				<li><a href="#/my-users">My Users</a></li>
+				<li><a href="#/my-facilities">My Facilities</a></li>
+				<li><a href="#/profile">Profile</a></li>
+				<li><a href="javascript:void(0)" ng-click="handleSignout()">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</header>

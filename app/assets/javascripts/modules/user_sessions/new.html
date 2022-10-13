@@ -1,0 +1,39 @@
+<!-- client/app/views/user_sessions/new.html -->
+
+
+<div class="forms-page-wrapper">
+    <header class="text-center form-header">
+        <a href=""><img src="/assets/logo.png" alt="Logo"></a>
+    </header>
+
+    <section class="form-wrapper">
+
+        <h3>Sign in to your EHR</h3>
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            {{error}}
+        </div>
+        <form ng-submit="submitLogin(loginForm)" role="form" ng-init="loginForm = {}">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="e.g. example@mail.com" ng-model="loginForm.email" required="required">
+
+            <label for="password">Password</label>
+            <input type="password" name="password"
+                   id="password"
+                   ng-model="loginForm.password"
+                   required="required"
+                   class="form-control"
+                   placeholder="*******">
+            <div class="form_element_footer">
+                <button class="button-primary" type=submit>Sign In <i class="fa fa-angle-right"></i></button>
+                <a class="text-right" href="#">Forgot your password?</a>
+            </div>
+        </form>
+
+    </section>
+
+    <div class="clearfix"></div>
+    <footer class="form-footer text-center">
+        <p>Don’t have an account? <a ng-href="#/sign_up" href="javascript:void(0);">Sign Up!</a></p>
+    </footer>
+</div>
